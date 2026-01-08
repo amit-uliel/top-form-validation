@@ -1,27 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webpack Template</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
     <form novalidate>
-        <label for="email">
-            <input type="email" id="email" name="email">
-        </label>
-        <label for="country">
-            <input type="text" id="country" name="country">
-        </label>
-        <label for="postalCode">
-            <input type="text" id="postalCode" name="postalCode">
-        </label>
-        <label for="password">
-            <input type="password" id="password" name="password">
-        </label>
-        <label for="passwordConfirmation">
-            <input type="password" id="passwordConfirmation" name="passwordConfirmation">
-        </label>
+      <label for="email">
+        <span>Email:</span>
+        <input type="email" id="email" name="email" required />
+      </label>
+      <label for="country">
+        <span>Country</span>
+        <input type="text" id="country" name="country" required />
+      </label>
+      <label for="postalCode">
+        <span>Postal Code</span>
+        <input type="text" id="postalCode" name="postalCode" minlength="3" required />
+      </label>
+      <label for="password">
+        <span>Password</span>
+        <input type="password" id="password" name="password" minlength="8" required />
+      </label>
+      <label for="passwordConfirmation">
+        <span>Confirm Password</span>
+        <input
+          type="password"
+          id="passwordConfirmation"
+          name="passwordConfirmation"
+          minlength="8"
+          required
+        />
+      </label>
+      <button type="submit">Submit</button>
     </form>
-</body>
+    <span class="success"></span>
+  </body>
 </html>
